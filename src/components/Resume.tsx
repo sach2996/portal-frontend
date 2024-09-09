@@ -67,36 +67,42 @@ export default function Resume() {
     },
     {
       name: "Certifications",
-      description:
-        "MTA: Introduction to Programming Using Python, Microsoft Azure Fundamentals, Developing Solutions for Microsoft Azure, AWS Certified Cloud Practitioner",
+      description: `MTA: Introduction to Programming Using Python, 
+      Microsoft Azure Fundamentals,
+       Developing Solutions for Microsoft Azure, 
+       AWS Certified Cloud Practitioner`,
     },
   ];
   return (
     <div className="resume-container">
-      {experienceDetails.map((item) => (
-        <div id="item.id" className="resume-items">
-          <div className="left-section">
-            <h4 style={{ borderBottom: "3px solid #11ABB0" }}>{item.type}</h4>
-          </div>
-          <div className="right-section">
-            <h3>{item.details.company}</h3>
-            <p className="item-designation">
-              {item.details.designation}
-              <span> • </span>
-              <em>{item.details.year}</em>
-            </p>
-            <div>{item.details.description}</div>
-          </div>
+      <div className="resume-items">
+        <div className="left-section">
+          <h4 style={{ borderBottom: "3px solid #11ABB0" }}>Work</h4>
         </div>
-      ))}
 
+        <div className="right-section">
+          {experienceDetails.map((item) => (
+            <div id="item.id">
+              <h3>{item.details.company}</h3>
+              <p className="item-designation">
+                {item.details.designation}
+                <span> • </span>
+                <em>{item.details.year}</em>
+              </p>
+              <div>{item.details.description}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <hr />
       {skills.map((item) => (
         <div id="item.name" className="resume-items">
           <div className="left-section">
             <h4 style={{ borderBottom: "3px solid #11ABB0" }}>{item.name}</h4>
           </div>
           <div className="right-section">
-            <div>{item.description}</div>
+            <div style={{ padding: "10px" }}>{item.description}</div>
           </div>
         </div>
       ))}

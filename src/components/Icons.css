@@ -1,0 +1,221 @@
+body {
+    transition: all .3s ease;
+}
+
+a {
+    display: inline-block;
+}
+
+/* Set icon size */
+.svg-icon svg {
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+
+.svg-icon svg>g rect {
+    fill: black;
+}
+
+.svg-icon svg>g circle {
+    fill: gray;
+}
+
+.svg-background {
+    opacity: 0.3;
+}
+
+a:hover .svg-background {
+    opacity: 0.6;
+}
+
+/* Hide social media links when printing. */
+@media print {
+    .svg-icon {
+        display: none;
+    }
+}
+
+
+/* Dark Mode Settings */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #fff;
+        background-color: #333;
+    }
+
+    p {
+        color: #fff;
+    }
+
+    .color-scheme--light,
+    .color-scheme--no-preference {
+        display: none;
+    }
+
+    /* SVG Icons */
+    .svg-icon svg {
+        color: white;
+    }
+
+    a {
+        color: #add8e6;
+    }
+
+    /* Hover/Focus Color */
+    a:hover .svg-icon svg g path {
+        color: #D83933;
+    }
+
+    a:hover .svg-icon svg {
+        fill: #D83933;
+    }
+
+    a:focus .svg-icon svg g path {
+        color: #00A398;
+    }
+
+    a:focus .svg-icon svg {
+        color: #00A398;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        color: #333;
+        background-color: #fff;
+    }
+
+    p {
+        color: #000;
+    }
+
+    .color-scheme--dark,
+    .color-scheme--no-preference {
+        display: none;
+    }
+
+    /* SVG Icons */
+    .svg-icon svg {
+        color: #1B1B1B;
+    }
+
+    /* Hover color  */
+    a:hover .svg-icon svg g path {
+        color: #A23737;
+    }
+
+    a:hover .svg-icon svg {
+        fill: #A23737;
+    }
+
+    a:focus .svg-icon svg g path {
+        color: #00A398;
+    }
+
+    a:focus .svg-icon svg {
+        color: #00A398;
+    }
+}
+
+@media (prefers-color-scheme: no-preference) {
+    body {
+        color: #333;
+        background-color: #fff;
+    }
+
+    p {
+        color: #000;
+    }
+
+    .color-scheme--light,
+    .color-scheme--dark {
+        display: none;
+    }
+
+    /* SVG Icons */
+    .svg-icon svg path {
+        fill: #1B1B1B;
+    }
+
+    /* Hover color */
+    a:hover .svg-icon svg g path {
+        color: #A23737;
+    }
+
+    a:hover .svg-icon svg {
+        fill: #A23737;
+    }
+
+    a:focus .svg-icon svg g path {
+        color: #00A398;
+    }
+
+    a:focus .svg-icon svg {
+        color: #00A398;
+    }
+}
+
+/* Forced Colors - Note: SVG elements retain their original colors in forced colors modes */
+@media (forced-colors: active) {
+    a:hover .svg-icon {
+        fill: text-emphasis-color;
+        outline: 2px solid transparent;
+        box-shadow: 0 0 10px 2px;
+    }
+
+    a:focus .svg-icon {
+        filter: drop-shadow(0 0 .05em WindowText);
+        fill: text-emphasis-color;
+    }
+
+    a:hover .svg-icon svg g path {
+        fill: text-emphasis-color;
+    }
+
+    a:focus .svg-icon svg g path {
+        fill: outline-color;
+    }
+
+    a .svg-icon svg g path {
+        fill: LinkText;
+    }
+}
+
+/* Styles here only apply to forced colors */
+@media (prefers-contrast: forced) {
+    a:hover .svg-icon {
+        fill: text-emphasis-color;
+        outline: 2px solid transparent;
+        box-shadow: 0 0 10px 2px;
+    }
+
+    a:focus .svg-icon {
+        fill: outline-color;
+    }
+}
+
+/* Hide visually */
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+
+/*
+Colors
+Red 50 - #D83933 (Primary Red)
+Red 60 - #A23737 (Dark Red)
+Mint Cool 40v - #00A398 (Primary Green)
+Mint Cool 60v - #0F6460 (Dark Green)
+Gray 50 - #757575 (Medium Gray)
+Gray Warm 4 - #F5F5F0 (Off-White)
+Gray 90 - #1B1B1B (Off-Black)
+*/
