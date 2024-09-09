@@ -9,13 +9,7 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <BrowserRouter>
-      <div
-        className="app-container"
-        style={{
-          backgroundImage: "url(src/assets/elephant.png)",
-          height: "100vh",
-        }}
-      >
+      <div className="app-container">
         <Navbar />
         <main className="main-content" style={{ margin: "5px" }}>
           <Routes>

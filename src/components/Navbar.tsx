@@ -1,7 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // import "./Navbar.css";
 import "./../App.css";
 export default function Navbar() {
+  const location = useLocation();
+  const activeStyle = {
+    color: "#F06000", // Change to your preferred color
+    fontWeight: "bold",
+  };
+  const inActiveStyle = {
+    color: "white", // Change to your preferred color
+    fontWeight: "bold",
+  };
+
   const navigationItems = [
     { path: "/", label: "Home" },
     { path: "/about", label: "About" },
@@ -17,7 +27,12 @@ export default function Navbar() {
             key={item.path}
             style={{ marginLeft: "2px", padding: "10px", color: "white" }}
           >
-            <Link to={item.path} style={{ color: "white", fontSize: "larger" }}>
+            <Link
+              to={item.path}
+              style={
+                location.pathname === item.path ? activeStyle : inActiveStyle
+              }
+            >
               {item.label}
             </Link>
           </li>
