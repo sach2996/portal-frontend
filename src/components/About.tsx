@@ -5,7 +5,7 @@ function About() {
   return (
     <section className="about-section">
       <div className="profile-picture">
-        <img src="src/assets/profile.jpg" alt="Your Profile Picture" />
+        <img src="public/profile.jpg" alt="Your Profile Picture" />
       </div>
       <div className="about-content">
         <div className="about-text">
@@ -32,7 +32,7 @@ function About() {
           </div>
           <div className="contact-details">
             <a
-              href="src/assets/Sachin Resume.pdf"
+              href="public/Sachin Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >

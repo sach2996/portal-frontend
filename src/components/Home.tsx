@@ -10,7 +10,7 @@ export default function Home() {
       <div className="home-container">
         <div className="round-div">
           <img
-            src="src/assets/home-profile.jpg"
+            src="public/home-profile.jpg"
             alt="Image description"
             style={{ objectFit: "cover", objectPosition: "center" }}
           />
