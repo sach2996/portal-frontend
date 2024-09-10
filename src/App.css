@@ -73,15 +73,19 @@
   margin: 10px 10%;
 }
 
+@media (max-width: 768px) {
+  .home-container {
+    width: 90%;
+  }
+}
+
 .home-container p {
   color: #000;
 }
 
-/* .home-container p {
-  color: black;
-} */
-
 .round-div img {
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 
