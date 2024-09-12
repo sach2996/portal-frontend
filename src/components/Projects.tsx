@@ -27,7 +27,9 @@ export default function Projects() {
             <h3>{project.name}</h3>
           </div> */}
           <div className="netflix-clone-link">
-            <a href="https://your-netflix-clone-url.com">Netflix Clone</a>
+            <a href="https://react-netflix-rho-drab.vercel.app/">
+              Netflix Clone
+            </a>
           </div>
         </div>
         {/* <Project /> */}
