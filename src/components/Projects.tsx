@@ -1,10 +1,10 @@
 import Project from "./Project";
 import "./Projects.css";
 export default function Projects() {
-  const project = {
-    name: "Netflix Clone",
-    tech: "React, Recoil",
-  };
+  // const project = {
+  //   name: "Netflix Clone",
+  //   tech: "React, Recoil",
+  // };
   return (
     <>
       <div className="projects-container">
