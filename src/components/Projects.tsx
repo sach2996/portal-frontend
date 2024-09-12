@@ -15,7 +15,7 @@ export default function Projects() {
           }}
         >
           <div style={{ borderRadius: "5px" }}>
-            <a href="https://your-netflix-clone-url.com">
+            <a href="https://react-netflix-rho-drab.vercel.app/">
               <img
                 src="public/netflix-favicon.png"
                 width={"100px"}
