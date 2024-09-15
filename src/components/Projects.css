@@ -1,6 +1,10 @@
 .projects-container {
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 }
 
 .project-details {
@@ -14,6 +18,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 768px) {
+        margin: 2rem;
+        width: 20rem;
+        height: 10rem;
+        background-color: white;
+        color: white;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
 }
 
 .netflix-clone-link a {

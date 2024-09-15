@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "./../App.css";
 export default function Resume() {
   const experienceDetails = [
@@ -73,14 +74,26 @@ export default function Resume() {
        AWS Certified Cloud Practitioner`,
     },
   ];
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="resume-container">
       <div className="resume-items">
-        <div className="left-section">
+        <div className={screenWidth > 768 ? "left-section" : ""}>
           <h4 style={{ borderBottom: "3px solid #11ABB0" }}>Work</h4>
         </div>
 
-        <div className="right-section">
+        <div className={screenWidth > 768 ? "right-section" : ""}>
           {experienceDetails.map((item) => (
             <div id="item.id">
               <h3>{item.details.company}</h3>
@@ -98,10 +111,10 @@ export default function Resume() {
       <hr />
       {skills.map((item) => (
         <div id="item.name" className="resume-items">
-          <div className="left-section">
+          <div className={screenWidth > 768 ? "left-section" : ""}>
             <h4 style={{ borderBottom: "3px solid #11ABB0" }}>{item.name}</h4>
           </div>
-          <div className="right-section">
+          <div className={screenWidth > 768 ? "right-section" : ""}>
             <div style={{ padding: "10px" }}>{item.description}</div>
           </div>
         </div>

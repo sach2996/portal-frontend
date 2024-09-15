@@ -32,8 +32,26 @@ export default function Projects() {
             </a>
           </div>
         </div>
-        {/* <Project /> */}
-        <Project />
+        <div
+          className="project-details"
+          style={{
+            background: "gray",
+          }}
+        >
+          <div style={{ borderRadius: "5px" }}>
+            <a href="https://react-examples-oos97iyqy-sach2996s-projects.vercel.app/">
+              <img src="public/react.svg" width={"100px"} height={"100px"} />
+            </a>
+          </div>
+          {/* <div>
+            <h3>{project.name}</h3>
+          </div> */}
+          <div className="netflix-clone-link">
+            <a href="https://react-examples-oos97iyqy-sach2996s-projects.vercel.app/">
+              React Libraries Learning
+            </a>
+          </div>
+        </div>
       </div>
       <div className="projects-container">
         <Project />
