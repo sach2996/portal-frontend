@@ -28,7 +28,7 @@ function About() {
             <p style={{ color: "#7A7A7A" }}>Toronto, Ontario</p>
             <p style={{ color: "#7A7A7A" }}>Canada</p>
             <p style={{ color: "#7A7A7A" }}>+1 1234567899</p>
-            <p style={{ color: "#7A7A7A" }}>sach@gmail.com</p>
+            <p style={{ color: "#7A7A7A" }}>sach2996@gmail.com</p>
           </div>
           <div className="contact-details">
             <a
