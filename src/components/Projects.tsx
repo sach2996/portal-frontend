@@ -39,7 +39,7 @@ export default function Projects() {
           }}
         >
           <div style={{ borderRadius: "5px" }}>
-            <a href="https://react-examples-oos97iyqy-sach2996s-projects.vercel.app/">
+            <a href="https://react-examples-ruddy.vercel.app/">
               <img src="public/react.svg" width={"100px"} height={"100px"} />
             </a>
           </div>
@@ -47,8 +47,8 @@ export default function Projects() {
             <h3>{project.name}</h3>
           </div> */}
           <div className="netflix-clone-link">
-            <a href="https://react-examples-oos97iyqy-sach2996s-projects.vercel.app/">
-              React Libraries Learning
+            <a href="https://react-examples-ruddy.vercel.app/">
+              Split My Expenses
             </a>
           </div>
         </div>
